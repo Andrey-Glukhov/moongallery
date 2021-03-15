@@ -19,9 +19,9 @@
   <script src="../wp-content/themes/MOON/js/TerrainGeneration.js"></script>
   <script src="../wp-content/themes/MOON/js/noiselib.js"></script>
   <script src="../wp-content/themes/MOON/js/OBJLoader.js"></script>-->
-	<script src="../wp-content/themes/MOON/js/three.js" crossorigin="anonymous"></script>
+	<!-- <script src="../wp-content/themes/MOON/js/three.js" crossorigin="anonymous"></script>
   <script src="../wp-content/themes/MOON/js/ColladaLoader.js"></script>
-	<script src="../wp-content/themes/MOON/js/WebGL.js"></script>
+	<script src="../wp-content/themes/MOON/js/WebGL.js"></script> -->
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156915458-2"></script>
 <script>
