@@ -65,4 +65,8 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	do_action( 'woocommerce_after_shop_loop_item' );
     
     ?>
+    
+    <label>
+        <input type="radio" name="radio" value="donation"> Select
+    </label>
 </li>

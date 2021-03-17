@@ -1,17 +1,3 @@
-<form action="" method="post">
-    <label>
-    <input type ="radio" name="radio" value="Donation offer">Donation offer
-    </label>
-    <label>
-    <input type ="radio" name="radio" value="Donation small">Donation small
-    </label>
-    <label>
-    <input type ="radio" name="radio" value="Donation medium">Donation medium
-    </label>
-    <label>
-    <input type ="radio" name="radio" value="Donation big">Donation big
-    </label>
-</form>
 <?php
 /**
  * Loop Add to Cart
@@ -29,14 +15,7 @@
  * @version     3.3.0
  */
 
-/*if(isset($_POST['submit'])){
-    if (!empty($_POST['radio'])){
-        echo ''.$_POST['radio'];
-    
-    }else{
-        echo 'Please select donation.';
-    }
-}*/
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
