@@ -101,7 +101,7 @@ do_action( 'woocommerce_after_main_content' );
  * @hooked woocommerce_get_sidebar - 10
  */
 do_action( 'woocommerce_sidebar' );
-//add cart and checkout to products page
+//add cart and checkout to products pagegit 
 echo do_shortcode( '[woocommerce_cart]' );
 echo do_shortcode( '[woocommerce_checkout]' );
 
