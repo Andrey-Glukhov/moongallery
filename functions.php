@@ -34,3 +34,18 @@ remove_action('woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30
 add_filter('woocommerce_show_page_title','__return_false'); 
 remove_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10 );
 remove_action('woocommerce_before_shop_loop', 'woocommerce_result_count', 20);
+
+remove_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_coupon_form', 10 );
+remove_action( 'woocommerce_checkout_order_review', 'woocommerce_order_review', 10 );
+function disable_shipping_calc_on_cart( $show_shipping ) {
+    if( is_cart() ) {
+        return false;
+    }
+    return $show_shipping;
+}
+add_filter( 'woocommerce_cart_ready_to_calc_shipping', 'disable_shipping_calc_on_cart', 99 );
+add_filter( 'woocommerce_order_item_visible', false);
+
+
+
+
