@@ -19,7 +19,9 @@ defined( 'ABSPATH' ) || exit;
 
 get_header( 'shop' );
 
-/**
+
+
+<?php /**
  * Hook: woocommerce_before_main_content.
  *
  * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)

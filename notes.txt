@@ -1,0 +1,13 @@
+$args = array(
+	'limit' => 9999,
+	'return' => 'objects',
+	'status' => 'processing'
+   );
+   $query = new WC_Order_Query( $args );
+   $orders = $query->get_orders();
+   foreach( $orders as $order_obj ) {
+	error_log('1--->' . print_r($order_obj, true));
+	error_log('2--->' . print_r($order_obj->get_total(), true));
+   } ?>
+   
+   <div class="donation_total" data-donation_sum="<?php echo get_option('gallery_donaion'); ?>" ></div>

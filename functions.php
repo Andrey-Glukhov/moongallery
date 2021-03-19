@@ -7,17 +7,19 @@ function moon_script_enqueue(){
   wp_enqueue_script( 'moon-js', get_template_directory_uri() . '/js/moon.js', array(), '1.0.0', true );
   
   if (is_shop()) {
-     global $wp_scripts;
-     //WC_Frontend_Scripts
-     wp_enqueue_script('wc-cart');
-     wp_enqueue_script('wc-checkout');
-     
-    // foreach( $wp_scripts->queue as $script ) :
-    //     $result['styles'][] =  $wp_scripts->registered[$script]->src . ";";
+    
+    global $wp_scripts;
+    //WC_Frontend_Scripts
+    wp_enqueue_script('wc-cart');
+    wp_enqueue_script('wc-checkout');
+    
+   foreach( $wp_scripts->queue as $script ) :
+       $result['styles'][] =  $wp_scripts->registered[$script]->src . ";";
+       
+   endforeach;
+   error_log('4--->' . print_r($wp_scripts,true));
+   //WC_Frontend_Scripts::enqueue_script('wc-checkout');
         
-    // endforeach;
-    // error_log(print_r($result,true));
-    //WC_Frontend_Scripts::enqueue_script('wc-checkout');
   }
 
 }
