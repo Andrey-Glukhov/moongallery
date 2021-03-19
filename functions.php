@@ -5,6 +5,20 @@ function moon_script_enqueue(){
 //js
   wp_enqueue_script('jquery');
   wp_enqueue_script( 'moon-js', get_template_directory_uri() . '/js/moon.js', array(), '1.0.0', true );
+  
+  if (is_shop()) {
+     global $wp_scripts;
+     //WC_Frontend_Scripts
+     wp_enqueue_script('wc-cart');
+     wp_enqueue_script('wc-checkout');
+     
+    // foreach( $wp_scripts->queue as $script ) :
+    //     $result['styles'][] =  $wp_scripts->registered[$script]->src . ";";
+        
+    // endforeach;
+    // error_log(print_r($result,true));
+    //WC_Frontend_Scripts::enqueue_script('wc-checkout');
+  }
 
 }
 add_action( 'wp_enqueue_scripts', 'moon_script_enqueue' );
@@ -45,6 +59,7 @@ function disable_shipping_calc_on_cart( $show_shipping ) {
 }
 add_filter( 'woocommerce_cart_ready_to_calc_shipping', 'disable_shipping_calc_on_cart', 99 );
 add_filter( 'woocommerce_order_item_visible', false);
+
 
 
 
