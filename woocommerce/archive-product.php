@@ -19,7 +19,15 @@ defined( 'ABSPATH' ) || exit;
 
 get_header( 'shop' );
 
-
+ ?>
+   
+   <div class="donation_total" data-donation_sum="<?php echo get_option('gallery_donaion'); ?>" ></div>
+<div class="progress">
+<div class="progress-bar" role ="progressbar" aria-valuenow="<?php echo get_option('gallery_donaion'); ?>"
+     aria-valuemin="0" aria-valuemax="100" style="<?php echo get_option('gallery_donaion'); ?>">
+    
+    </div>
+    </div>
 
 <?php /**
  * Hook: woocommerce_before_main_content.
@@ -90,6 +98,9 @@ if ( woocommerce_product_loop() ) {
 	do_action( 'woocommerce_no_products_found' );
 }
 
+
+
+
 /**
  * Hook: woocommerce_after_main_content.
  *
@@ -106,5 +117,6 @@ do_action( 'woocommerce_sidebar' );
 //add cart and checkout to products pagegit 
 echo do_shortcode( '[woocommerce_cart]' );
 echo do_shortcode( '[woocommerce_checkout]' );
+
 
 get_footer( 'shop' );
