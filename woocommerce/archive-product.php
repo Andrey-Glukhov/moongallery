@@ -18,6 +18,18 @@
 defined( 'ABSPATH' ) || exit;
 
 get_header( 'shop' );
+$args = array(
+	'limit' => 9999,
+	'return' => 'objects',
+	'status' => 'processing'
+   );
+   $query = new WC_Order_Query( $args );
+   $orders = $query->get_orders();
+   $sum=0;
+   foreach( $orders as $order_obj ) {
+	$sum += $order_obj->get_total();
+   } 
+   echo '---' . $sum;
 
  ?>
    
