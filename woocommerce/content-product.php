@@ -67,6 +67,6 @@ if ( empty( $product ) || ! $product->is_visible() ) {
     ?>
     
     <label>
-        <input type="radio" name="radio" value="donation"> Select
+        <input type="radio" name="radio" id="radio-button" value="donation"> <?php echo $product->get_title(); ?>
     </label>
 </li>

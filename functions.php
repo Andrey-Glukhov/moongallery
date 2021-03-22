@@ -63,7 +63,7 @@ add_filter( 'woocommerce_cart_ready_to_calc_shipping', 'disable_shipping_calc_on
 add_filter( 'woocommerce_order_item_visible', false);
 
 if ( get_option( 'gallery_donaion' ) === false ) {
-  add_option( 'gallery_donaion', 10000 );
+  add_option( 'gallery_donaion', 20000 );
 }
 
 

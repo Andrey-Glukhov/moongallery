@@ -31,12 +31,17 @@ $args = array(
    } 
    echo '---' . $sum;
 
+    $ordermax = 20000;
+    
+
+
+   
  ?>
    
    <div class="donation_total" data-donation_sum="<?php echo get_option('gallery_donaion'); ?>" ></div>
 <div class="progress">
-<div class="progress-bar" role ="progressbar" aria-valuenow="<?php echo get_option('gallery_donaion'); ?>"
-     aria-valuemin="0" aria-valuemax="100" style="<?php echo get_option('gallery_donaion'); ?>">
+<div class="progress-bar" role ="progressbar" aria-valuenow= "20000"
+     aria-valuemin="0" aria-valuemax="20000" style= "width:<?php echo ($sum/$ordermax) * 100;?>%">
     
     </div>
     </div>
