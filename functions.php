@@ -13,11 +13,11 @@ function moon_script_enqueue(){
     wp_enqueue_script('wc-cart');
     wp_enqueue_script('wc-checkout');
     
-   foreach( $wp_scripts->queue as $script ) :
-       $result['styles'][] =  $wp_scripts->registered[$script]->src . ";";
+  //  foreach( $wp_scripts->queue as $script ) :
+  //      $result['styles'][] =  $wp_scripts->registered[$script]->src . ";";
        
-   endforeach;
-   error_log('4--->' . print_r($wp_scripts,true));
+  //  endforeach;
+  //  error_log('4--->' . print_r($wp_scripts,true));
    //WC_Frontend_Scripts::enqueue_script('wc-checkout');
         
   }

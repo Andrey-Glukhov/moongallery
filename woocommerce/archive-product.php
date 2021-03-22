@@ -116,7 +116,7 @@ do_action( 'woocommerce_after_main_content' );
 do_action( 'woocommerce_sidebar' );
 //add cart and checkout to products pagegit 
 echo do_shortcode( '[woocommerce_cart]' );
-echo do_shortcode( '[woocommerce_checkout]' );
+echo do_shortcode( '[woocommerce_checkout]' );?>
+<button class="donation_button">DONATE</button>
 
-
-get_footer( 'shop' );
+<?php get_footer( 'shop' );

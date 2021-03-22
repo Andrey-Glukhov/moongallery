@@ -74,8 +74,31 @@ $(document).ready(function() {
     $('.close').on('click', function() {
         tl.reverse();
     });
+
+});
+
+document.addEventListener("DOMContentLoaded", function() {
     document.addEventListener('updated_wc_div', function() {
         console.log('added to cart--');
+    });
+    $('.donation_button').on('click', function() {
+        $('input[value="donation"]').each(function() {
+            if (this.checked) {
+                console.log($(this).parent().siblings('a.button.add_to_cart_button.ajax_add_to_cart'));
+                $(this).parent().siblings('a.button.add_to_cart_button.ajax_add_to_cart')[0].click();
+            }
+
+        });
+    });
+    $(document.body).on('added_to_cart', function() {
+        console.log('aDDDeD');
+    });
+    // $(document.body).on('adding_to_cart', function() {
+    //     console.log('aDDDing');
+    // });
+    $(document.body).on('adding_to_cart', function() {
+        console.log('aDDDing');
+        //$( '.hide_cart_widget_if_empty' ).closest( '.widget_shopping_cart' ).show();
     });
 });
 
