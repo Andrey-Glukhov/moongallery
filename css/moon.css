@@ -1,1210 +1,1425 @@
-body, html {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-::-webkit-scrollbar {
-  display: none;
-}
-input, textarea, select, a, button { outline: none; }
-input, textarea, select, a, button:focus { outline:none }
-input, textarea, select, a, button:active { outline: none }
-@font-face {
-  font-family: 'SunCd-SemiBold';
-  src: url(SunCd-SemiBold.woff) format("woff");
-  font-weight: bold;
-  font-style: bold;
-}
-@font-face {
-  font-family: 'Sun-Regular';
-  src: url(Sun-Regular.woff) format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Sun-RegularItalic';
-  src: url(Sun-RegularItalic.woff) format("woff");
-  font-weight: normal;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'SunCd-Bold';
-  src: url(SunCd-Bold.woff) format("woff");
-  font-weight: bold;
-  font-style: bold;
-}
-@font-face {
-  font-family: 'SunCd-ExtraBold';
-  src: url(SunCd-ExtraBold.woff) format("woff");
-  font-weight: bold;
-  font-style: bold;
-}
-@font-face {
-  font-family: 'SunCd-ExtraLight';
-  src: url(SunCd-ExtraLight.woff) format("woff");
-  font-weight: bold;
-  font-style: bold;
+body,
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-.artist_button{
-  color: #fff;
-  background-color: #000;
-  font-family: SunCd-ExtraBold;
-  font-size: 1rem;
-  letter-spacing: 0.1rem;
-  text-align: center;
-  padding:7px 10px;
-  border: 1px solid white;
-  cursor: pointer;
-  -webkit-transition: all 1s;
-  -moz-transition: all 1s;
-  transition: all 1s;
+::-webkit-scrollbar {
+    display: none;
 }
+
+input,
+textarea,
+select,
+a,
+button {
+    outline: none;
+}
+
+input,
+textarea,
+select,
+a,
+button:focus {
+    outline: none
+}
+
+input,
+textarea,
+select,
+a,
+button:active {
+    outline: none
+}
+
+@font-face {
+    font-family: 'SunCd-SemiBold';
+    src: url(SunCd-SemiBold.woff) format("woff");
+    font-weight: bold;
+    font-style: bold;
+}
+
+@font-face {
+    font-family: 'Sun-Regular';
+    src: url(Sun-Regular.woff) format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sun-RegularItalic';
+    src: url(Sun-RegularItalic.woff) format("woff");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'SunCd-Bold';
+    src: url(SunCd-Bold.woff) format("woff");
+    font-weight: bold;
+    font-style: bold;
+}
+
+@font-face {
+    font-family: 'SunCd-ExtraBold';
+    src: url(SunCd-ExtraBold.woff) format("woff");
+    font-weight: bold;
+    font-style: bold;
+}
+
+@font-face {
+    font-family: 'SunCd-ExtraLight';
+    src: url(SunCd-ExtraLight.woff) format("woff");
+    font-weight: bold;
+    font-style: bold;
+}
+
+#main {
+    background-color: red;
+}
+
+.artist_button {
+    color: #fff;
+    background-color: #000;
+    font-family: SunCd-ExtraBold;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    padding: 7px 10px;
+    border: 1px solid white;
+    cursor: pointer;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    transition: all 1s;
+}
+
 .artist_button:hover {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }
-.event_button{
-  color: #fff;
-  background-color: #000;
-  font-family: SunCd-ExtraBold;
-  font-size: 1rem;
-  letter-spacing: 0.1rem;
-  text-align: center;
-  padding:7px 10px;
-  border: 1px solid white;
-  cursor: pointer;
-  -webkit-transition: all 1s;
-  -moz-transition: all 1s;
-  transition: all 1s;
+
+.event_button {
+    color: #fff;
+    background-color: #000;
+    font-family: SunCd-ExtraBold;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    padding: 7px 10px;
+    border: 1px solid white;
+    cursor: pointer;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    transition: all 1s;
 }
+
 .event_button:hover {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }
-#container{
-position: absolute; 
-left:0px; 
-top:0px; 
- width:100%; 
-height:100%;
-background-image:url(http://www.moongallery.eu/wp-content/uploads/2020/10/20200614untitled-25ßbearbeitet.jpg);
-background-position: center;
-background-size: cover;
-background-repeat: no-repeat;
+
+#container {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-image: url(http://www.moongallery.eu/wp-content/uploads/2020/10/20200614untitled-25ßbearbeitet.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
+
+
 /*---------------------------------------------
 artist page
 ---------------------------------------------*/
-.artist_wraper{
-  width: 100%;
-  height: 100%;
-  margin: 0;
-}
-.menu{
-  position: fixed;
-  z-index: 100;
-  background-color: black;
-  width: 60%;
-  height: 106px;
-  -webkit-box-shadow: 0px 10px 16px 2px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 10px 16px 2px rgba(0,0,0,0.75);
-  box-shadow: 0px 10px 16px 2px rgba(0,0,0,0.75);
-}
-.top_menue{
-  padding: 15px;
-  margin: 0;
-}
-.artist_profile{
-  padding: 150px 50px 50px 50px;
-}
-.logo_w{
-  cursor: pointer;
-  background: url(http://www.moongallery.eu/wp-content/uploads/2019/12/moon_gallery_logo_transparent-02.png) no-repeat;
-  background-size: contain;
-}
-.navigation_links{
-  padding-top: 20px;
-  padding-bottom: 20px;
-  display: flex;
-  justify-content: space-around;
-}
-.navigation_links>a{
-  color: white;
-  font-family: SunCd-ExtraBold;
+
+.artist_wraper {
+    width: 100%;
+    height: 100%;
+    margin: 0;
 }
 
-.left{
-  width:60%;
-  height: 100%;
-  background-color:black;
-  float: left;
-  overflow: auto;
-  box-sizing: border-box;
-}
-.right{
-  width:40%;
-  height: 100%;
-  float:right;
-  background-color:white;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  overflow: auto;
-  box-sizing: border-box;
-}
-.right>img{
-  width: 100%;
-  height: auto;
-  padding: 40px;
-}
-.portrait>img{
-  width: 100%;
-  height: auto;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-.profile{
-  color: white;
-  font-family: SunCd-SemiBold;
-}
-.profile>p>span{
-  color: white;
-  font-family: SunCd-ExtraLight;
-}
-.profile>p>a{
-  color: white;
-  font-family: SunCd-ExtraLight;
-}
-.statement>p>span{
-  color: white;
-  font-family: SunCd-ExtraLight;
-}
-.statement{
-  color: white;
-  font-family: Sun-Regular;
-}
-.artist_info{
-  margin-bottom: 45px;
-}
-.example_images>img{
-  width: 100%;
-  height: auto;
-  padding: 40px;
-}
-.sceen_wraper{
-  width: 100%;
-  height: 100%;
-  position: fixed;
-}
-.backdrop{
-  z-index: -1000;
-}
-.buttons{
-  width: 100%;
-  height: 100%;
-  position: fixed;
-}
-.submission{
-	font-family: SunCd-SemiBold;
-    font-size: 1rem;
-    text-align: center;
-	padding: 15px;
-    border: 1px solid white;
-}
-.submission_image.aligncenter.wp-image-1026.size-large{
-	width: 100%;
-    height: auto;
-    padding: 30px;
-}
-/*---------------------------------------------
-new event page
----------------------------------------------*/
-.event_page_wraper{
-	background-color:#000000;
-	width:100%;
-	min-height:100vh;
-}
-.categories{
-	display:flex;
-	justify-content:center;
-}
-.navigation-top{
-	padding: 10px 20px;
-	min-height:100px;
-}
-.page_title{
-	font-family:SunCd-Bold;
-	font-size:2rem;
-	color:white;
-	text-align:right;
-}
-
-.event_logo{
-	cursor: pointer;
-    background: url(http://www.moongallery.eu/wp-content/uploads/2019/12/moon_gallery_logo_transparent-02.png) no-repeat;
-  background-size: contain;
-}
-/*---------------------------------------------
-event page
----------------------------------------------*/
-.event_wraper{
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-.event_menu{
-  position: fixed;
-  z-index: 100;
-  background-color: black;
-  max-width: 100%;
-  width: 100%;
-  height: 106px;
-  -webkit-box-shadow: 0px 10px 16px 2px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 10px 16px 2px rgba(0,0,0,0.75);
-  box-shadow: 0px 10px 16px 2px rgba(0,0,0,0.75);
-}
-.event_background{
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  background: url(http://www.moongallery.eu/wp-content/uploads/2018/11/maxresdefault_h.jpg) no-repeat;
-  background-size: cover;
-}
-.event_profile{
-  padding: 150px 50px 50px 50px;
-}
-.e_profile>h3{
-  color: white;
-  font-family: SunCd-SemiBold;
-}
-.e_profile>p{
-  color: white;
-  font-family: SunCd-SemiBold;
-}
-.e_profile>p>span{
-  color: white;
-  font-family: SunCd-ExtraLight;
-}
-.e_profile>p>a{
-  color: white;
-  font-family: SunCd-SemiBold;
-}
-.e_portrait>img{
-  width: 100%;
-  height: auto;
-}
-.e_portrait{
-  background-color: black;
-  padding: 20px;
-}
-.e_profile{
-  background-color: black;
-  padding: 20px;
-}
-.speacker_profile{
-  padding: 50px 50px 50px 50px;
-}
-.s_portrait{
-  background-color: black;
-  padding: 20px;
-}
-.s_portrait>img{
-  width: 100%;
-  height: auto;
-}
-/*------------------------------------------------
-artists
-------------------------------------------------*/
-.artists{
-  z-index: 100;
-  position: relative;
-  width: 15%;
-  height: auto;
-  top: 0;
-  right: 0;
-  padding-right: 0;
-  padding-left: 0;
-  margin-right: 0;
-  margin-left: auto;
-
-}
-.set{
-  position: relative;
-  width: 100%;
-  height: auto;
-  background-color: #000;
-}
-.set>a{
-  text-align: center;
-  display: block;
-  padding:10px 15px;
-  text-decoration: none;
-  color: #fff;
-  font-family: SunCd-ExtraBold;
-  font-size: 1.4rem;
-  letter-spacing: 0.1rem;
-  -webkit-transition: all 0.2s linear;
-  -moz-transition: all 0.2s linear;
-  transition: all 0.2s linear;
-}
-.set>a i{
-  position: relative;
-  float: right;
-  margin-top: 4px;
-  color: #fff;
-}
-.set>a.active{
-  background-color: #000;
-  color: #fff;
-}
-.set>a.active i{
-  color: #fff;
-}
-.content{
-  display: none;
-  position: relative;
-  color: #fff;
-  width: 100%;
-  height: 600px;
-	overflow: auto;
-  background-color: #000;
-  padding: 10px 15px 40px 15px;
-}
-.content a{
-  font-family:Sun-Regular;
-  font-size: 0.8rem;
-  margin: 0;
-  color: #fff;
-}
-.name>a{
-	color:white;
-}
-.img_caption{
-font-family: SunCd-SemiBold;
-    font-size: 1rem;
-  margin: 0;
-  padding: 40px 40px 0 40px;
-  color: #000;
-}
-/*------------------------------------------------
-logo
-------------------------------------------------*/
-.logo{
-  position: absolute;
-  top: 1%;
-  left: 2.5%;
-  width: 8%;
-  height: 12%;
-  background: url(http://www.moongallery.eu/wp-content/uploads/2019/05/moon_gallery_logo_transparent-01.png) no-repeat;
-  background-size: contain;
-}
-
-/*------------------------------------------------
-buttons
-------------------------------------------------*/
-.about{
-  position: absolute;
-  top: 10%;
-  left: 30%;
-  width: auto;
-  height: auto;
-
-}
-.workshops{
-  position: absolute;
-  top: 20%;
-  right:45%;
-  width: auto;
-  height: auto;
-
-}
-.gallery{
-  position: absolute;
-  top: 30%;
-  left: 10%;
-  width: auto;
-  height: auto;
-
-}
-.open_call{
-  position: absolute;
-  top: 40%;
-  right:10%;
-  width: auto;
-  height: auto;
-
-}
-.agenda{
-  position: absolute;
-  top: 50%;
-  left: 20%;
-  width: auto;
-  height: auto;
-
-}
-.contact{
-  position: absolute;
-  top: 90%;
-  left: 60%;
-  width: auto;
-  height: auto;
-
-}
-.facebook{
-  position: absolute;
-  top: 80%;
-  left: 5%;
-  width: auto;
-  height: auto;
-
-}
-.facebook>a{
-  color: #fff;
-}
-.facebook>a:hover{
-  color: #fff;
-  text-decoration: none;
-}
-.instagramm{
-  position: absolute;
-  top: 90%;
-  left: 10%;
-  width: auto;
-  height: auto;
-}
-.instagramm>a{
-  color: #fff;
-}
-.instagramm>a:hover{
-  color: #fff;
-  text-decoration: none;
-}
-.login{
-  position: absolute;
-  top: 80%;
-  right: 40%;
-  width: 10%;
-  height: auto;
-
-}
-.collaborators{
-  position: absolute;
-  top: 60%;
-  left: 25%;
-  width: 15%;
-  height: auto;
-
-}
-
-/*------------------------------------------------
-login
-------------------------------------------------*/
-
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: none;
-}
-
-#mc_embed_signup{
-  color: #fff;
-  font-family: SunCd-SemiBold;
-  font-size: 1.2rem;
-  letter-spacing: 0.1rem;
-  text-align: left;
-  padding:10px 15px;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: all 1s;
-  -moz-transition: all 1s;
-  transition: all 1s;
-}
-
-#mc_embed_signup h2{
-  color: #fff;
-  font-family: SunCd-Bold;
-  font-size: 1.2rem;
-  letter-spacing: 0.1rem;
-  text-align: left;
-  padding:10px 15px;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: all 1s;
-  -moz-transition: all 1s;
-  transition: all 1s;
-}
-
-
-/* Set a style for all buttons */
-button{
-  color: #fff;
-  background-color: #000;
-  font-family: SunCd-ExtraBold;
-  font-size: 1.5rem;
-  letter-spacing: 0.1rem;
-  text-align: center;
-  padding:10px 15px;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: all 1s;
-  -moz-transition: all 1s;
-  transition: all 1s;
-}
-
-button:hover {
-  transform: scale(1.1);
-}
-
-.log{
-  background-color: #000;
-  color: #fff;
-  font-family: Sun-Regular;
-  border: solid 1px #fff;
-  margin-top: 12px;
-  font-size: 0.9rem;
-  padding: 5px;
-}
-.form{
-  padding: 45px;
-}
-span.psw {
-  float: right;
-  padding-top: 16px;
-}
-.psw>a{
-  color: #fff;
-}
-.psw>a:hover{
-  color: #fff;
-}
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: hidden; /* Enable scroll if needed */
-  padding-top: 60px;
-}
-
-/* Modal Content/Box */
-.modal-subs {
-background-color: #000;
-  position: static;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: scroll;
-  width: 60%;
-  height: 80%;
-  color: #fff;
-  font-family: Sun-Regular;
-}
-
-/* The Close Button (x) */
-.close {
-  color: #fff;
-  font-size: 35px;
-  font-weight: bold;
-  text-shadow: none;
-  opacity: 1;
-	margin:10px 35px;
-  -webkit-transition: all 0.2s linear;
-  -moz-transition: all 0.2s linear;
-  transition: all 0.2s linear;
-	
-}
-.close>p:hover{
-  color: #dcddde;
-  font-size: 35px;
-  font-weight: bold;
-  text-shadow: none;
-  opacity: 1;
-  transition: scale(1.1);
-}
-
-.close>p{
-	position:fixed;
-	z-index:1000;
-}
-/* Add Zoom Animation */
-.animate {
-  -webkit-animation: animatezoom 0.6s;
-  animation: animatezoom 0.6s
-}
-
-@-webkit-keyframes animatezoom {
-  from {-webkit-transform: scale(0)}
-  to {-webkit-transform: scale(1)}
-}
-
-@keyframes animatezoom {
-  from {transform: scale(0)}
-  to {transform: scale(1)}
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-    display: block;
-    float: none;
-  }
-
-}
-/*------------------------------------------------
-gallery page
-------------------------------------------------*/
-.grid_wraper{
-  width: 100%;
-  height: 100%;
-  margin: 0;
-}
-.grid {
-   display: grid;
-   grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
-   grid-auto-rows: 1fr;
-   padding-top: 127px;
-   	overflow: auto;
-    height: auto;
+.menu {
+    position: fixed;
+    z-index: 100;
     background-color: black;
-    }
-    
-    .grid::before {
-      content: '';
-      width: 0;
-      padding-bottom: 100%;
-      grid-row: 1 / 1;
-      grid-column: 1 / 1;
-    }
-
-    .grid > *:first-child {
-      grid-row: 1 / 1;
-      grid-column: 1 / 1;
-    }
-
-    /* Just to make the grid visible */
-
-    .grid > * {
-      background: rgba(0,0,0,0.1);
-      border: 1px white solid;
-    }
-.featured_image{
-	cursor:pointer;
-}
-/*------------------------------------------------
-about
-------------------------------------------------*/
-.modal-about{
-  background-color: #000;
-  position: fixed;
-  margin-left: auto;
-  margin-right: auto;
-  position: static;
-  overflow: scroll;
-  width: 60%;
-  height: 80%;
-  color: #fff;
-  font-family: Sun-Regular;
-}
-.about_cont{
-  padding: 45px;
-}
-.img2{
-  width: 100%;
-  height: auto;
-}
-.img1{
-  width: 100%;
-  height: auto;
-}
-.img3{
-  width: 100%;
-  height: auto;
-}
-.has-fixed-layout{
-	width:auto !important;
-}
-.has-fixed-layout>tbody>tr>td{
-	padding-right:20px !important;
-}
-.about_gallery_img>figure>img{
-	width:100%;
-	height:auto !important;
+    width: 60%;
+    height: 106px;
+    -webkit-box-shadow: 0px 10px 16px 2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 10px 16px 2px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 10px 16px 2px rgba(0, 0, 0, 0.75);
 }
 
-/*------------------------------------------------
-workshops
-------------------------------------------------*/
-.modal-workshops{
-  background-color: #000;
-  position: fixed;
-  margin-left: auto;
-  margin-right: auto;
-  position: static;
-  overflow: scroll;
-  width: 60%;
-  height: 80%;
-  color: #fff;
-  font-family: Sun-Regular;
-}
-.workshop_cont{
-  padding: 45px;
+.top_menue {
+    padding: 15px;
+    margin: 0;
 }
 
-/*------------------------------------------------
-open_call
-------------------------------------------------*/
-.modal-open_call{
-  background-color: #000;
-  position: fixed;
-  margin-left: auto;
-  margin-right: auto;
-  position: static;
-  overflow: scroll;
-  width: 60%;
-  height: 80%;
-  color: #fff;
-  font-family: Sun-Regular;
+.artist_profile {
+    padding: 150px 50px 50px 50px;
 }
 
-.form_title{
- font-family: SunCd-SemiBold;
+.logo_w {
+    cursor: pointer;
+    background: url(http://www.moongallery.eu/wp-content/uploads/2019/12/moon_gallery_logo_transparent-02.png) no-repeat;
+    background-size: contain;
 }
 
-.call_cont{
-  padding: 45px;
+.navigation_links {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
 }
 
-.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required{
-	border: solid 1px black;
-	padding: 10px;
-	margin: 8px 0;
-	width:100%;
-}
-
-.wpcf7-form-control.wpcf7-text.wpcf7-email.wpcf7-validates-as-required.wpcf7-validates-as-email{
-	border: solid 1px black;
-	padding: 10px;
-	margin: 8px 0;
-	width:100%;
-}
-
-.wpcf7-form-control.wpcf7-text.wpcf7-url.wpcf7-validates-as-url{
-	border: solid 1px black;
-	padding: 10px;
-	margin: 8px 0;
-	width:100%;
-}
-
-.wpcf7-form-control.wpcf7-textarea.wpcf7-validates-as-required{
-	border: solid 1px black;
-	padding: 10px;
-	margin: 8px 0;
-	width:100%;
-}
-.wpcf7-form{
-	font-family: Sun-Regular;
-	font-size:1rem;
-}
-
-.call_2{
-width:100%;
-}
-
-.wpcf7-form-control.wpcf7-submit{
-	background-color: black;
+.navigation_links>a {
     color: white;
-    border: none;
-    padding: 7px 20px;
-	font-family: SunCd-SemiBold;
-	float:right;
-	cursor:pointer;
-	-webkit-transition: all 1s;
- 	 -moz-transition: all 1s;
-  	transition: all 1s;
-}
-.wpcf7-form-control.wpcf7-submit:hover {
-  transform: scale(1.1);
+    font-family: SunCd-ExtraBold;
 }
 
-
-/*------------------------------------------------
-agenda
-------------------------------------------------*/
-.modal-agenda{
-  background-color: #000;
-  position: fixed;
-  margin-left: auto;
-  margin-right: auto;
-  position: static;
-  overflow: scroll;
-  width: 60%;
-  height: 80%;
-  color: #fff;
-  font-family: Sun-Regular;
-}
-.agenda_cont{
-  padding: 45px;
-}
-.event>a{
-  color: #fff;
-}
-.event>h3{
- color: #fff;
- font-size:150%;
- font-family: Sun-Regular;
-}
-.event>p{
- color: #fff;
- font-size:100%;
- font-family: Sun-Regular;
-}
-.event_img{
-  max-width: 500px;
-  max-height: 500px;
-  height:auto; width:100%;
-}
-
-/*------------------------------------------------
-agenda
-------------------------------------------------*/
-.modal-contact{
-  background-color: #000;
-  position: fixed;
-  margin-left: auto;
-  margin-right: auto;
-  position: static;
-  overflow: scroll;
-  width: 60%;
-  height: 80%;
-  color: #fff;
-  font-family: Sun-Regular;
-}
-.contact_cont{
-  padding: 45px;
-}
-
-/*------------------------------------------------
-partners
-------------------------------------------------*/
-.modal-part{
-  background-color: #000;
-  position: fixed;
-  margin-left: auto;
-  margin-right: auto;
-  position: static;
-  overflow: scroll;
-  width: 60%;
-  height: 80%;
-  color: #fff;
-  font-family: Sun-Regular;
-}
-.partner_cont{
-  padding: 45px;
-}
-.partner_section{
-	margin-bottom:20px;
-	margin-right: -10px;
-    margin-left: -10px;
-}
-.partner_img{
-  width:100%;
-  height:auto;
-	
-}
-
-/*------------------------------------------------
-exhibition leflet
-------------------------------------------------*/
-.leflet_wraper{
-	width:100%;
-	min-height:100%;
-	height:auto;
-	background-color:#181818;
-}
-.leiden_event_logo{
-	width:100%;
-	height:auto;
-	padding-top:20px;
-}
-.language_button_wraper{
-	margin-top: 100px;
-	padding-bottom: 50px;
-}
-.language_button>a{
-	text-align: center;
-    background-color: white;
-    padding: 10px 20px;
-	font-family: SunCd-SemiBold;
-	font-size:1.2rem;
-	color:#181818;
-	min-width: 120px;
-}
-.language_button{
-	display:flex;
-	justify-content:center;
-}
-.leiden_event>p{
-	padding-top:30px;
-	font-family: SunCd-SemiBold;
-	font-size:1.2rem;
-	color:#ffffff;
-	text-align:center;
-}
-.work_descr>h2{
-	font-family: 'SunCd-Bold';
-	font-size:1.8rem;
-}
-.work_descr>h4{
-	font-family: 'Sun-RegularItalic';
-	font-size:1.2rem;
-}
-.work_descr>p{
-   font-family: 'Sun-Regular';
-   font-size:1.2rem;
-}
-/*--------------------------------------------------------------
-responsive
---------------------------------------------------------------*/
-/*xs*/
-@media only screen and (max-width: 768px) {
-  /*---------------------------------------------
-  artist page
-  ---------------------------------------------*/
-  .left{
-    width:100%;
-    height: auto;
-    background-color:black;
+.left {
+    width: 60%;
+    height: 100%;
+    background-color: black;
+    float: left;
     overflow: auto;
     box-sizing: border-box;
-  }
-  .right{
-    width:100%;
-    height: auto;
-    background-color:white;
+}
+
+.right {
+    width: 40%;
+    height: 100%;
+    float: right;
+    background-color: white;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     overflow: auto;
     box-sizing: border-box;
-  }
-  .menu{
-    width: 100%;}
-	
- 	.modal-about, .modal-workshops, .modal-open_call, .modal-subs, .modal-part{
-    width: 95%;
-	height: 95%;
-  }
-	 .about_cont, .workshop_cont, .call_cont, .form, .partner_cont{
-  padding: 45px 20px;
 }
-	 .artists{
-		  width:45%;
-	  }
-	.about{
-		left:20%;
-	}
-		  .workshops{
-		  right:5%;
-	  }
-	.gallery{
-		left:5%;
-	}
-	.login{
-		right:5%;
-	}
-	.instagramm{
-		left:25%;
-	}
-  }
-  /*sm*/
-  @media screen and (min-width: 768px) and (max-width: 992px) {
+
+.right>img {
+    width: 100%;
+    height: auto;
+    padding: 40px;
+}
+
+.portrait>img {
+    width: 100%;
+    height: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.profile {
+    color: white;
+    font-family: SunCd-SemiBold;
+}
+
+.profile>p>span {
+    color: white;
+    font-family: SunCd-ExtraLight;
+}
+
+.profile>p>a {
+    color: white;
+    font-family: SunCd-ExtraLight;
+}
+
+.statement>p>span {
+    color: white;
+    font-family: SunCd-ExtraLight;
+}
+
+.statement {
+    color: white;
+    font-family: Sun-Regular;
+}
+
+.artist_info {
+    margin-bottom: 45px;
+}
+
+.example_images>img {
+    width: 100%;
+    height: auto;
+    padding: 40px;
+}
+
+.sceen_wraper {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+
+.backdrop {
+    z-index: -1000;
+}
+
+.buttons {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+
+.submission {
+    font-family: SunCd-SemiBold;
+    font-size: 1rem;
+    text-align: center;
+    padding: 15px;
+    border: 1px solid white;
+}
+
+.submission_image.aligncenter.wp-image-1026.size-large {
+    width: 100%;
+    height: auto;
+    padding: 30px;
+}
+
+
+/*---------------------------------------------
+new event page
+---------------------------------------------*/
+
+.event_page_wraper {
+    background-color: #000000;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.categories {
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-top {
+    padding: 10px 20px;
+    min-height: 100px;
+}
+
+.page_title {
+    font-family: SunCd-Bold;
+    font-size: 2rem;
+    color: white;
+    text-align: right;
+}
+
+.event_logo {
+    cursor: pointer;
+    background: url(http://www.moongallery.eu/wp-content/uploads/2019/12/moon_gallery_logo_transparent-02.png) no-repeat;
+    background-size: contain;
+}
+
+
+/*---------------------------------------------
+event page
+---------------------------------------------*/
+
+.event_wraper {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.event_menu {
+    position: fixed;
+    z-index: 100;
+    background-color: black;
+    max-width: 100%;
+    width: 100%;
+    height: 106px;
+    -webkit-box-shadow: 0px 10px 16px 2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 10px 16px 2px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 10px 16px 2px rgba(0, 0, 0, 0.75);
+}
+
+.event_background {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: url(http://www.moongallery.eu/wp-content/uploads/2018/11/maxresdefault_h.jpg) no-repeat;
+    background-size: cover;
+}
+
+.event_profile {
+    padding: 150px 50px 50px 50px;
+}
+
+.e_profile>h3 {
+    color: white;
+    font-family: SunCd-SemiBold;
+}
+
+.e_profile>p {
+    color: white;
+    font-family: SunCd-SemiBold;
+}
+
+.e_profile>p>span {
+    color: white;
+    font-family: SunCd-ExtraLight;
+}
+
+.e_profile>p>a {
+    color: white;
+    font-family: SunCd-SemiBold;
+}
+
+.e_portrait>img {
+    width: 100%;
+    height: auto;
+}
+
+.e_portrait {
+    background-color: black;
+    padding: 20px;
+}
+
+.e_profile {
+    background-color: black;
+    padding: 20px;
+}
+
+.speacker_profile {
+    padding: 50px 50px 50px 50px;
+}
+
+.s_portrait {
+    background-color: black;
+    padding: 20px;
+}
+
+.s_portrait>img {
+    width: 100%;
+    height: auto;
+}
+
+
+/*------------------------------------------------
+artists
+------------------------------------------------*/
+
+.artists {
+    z-index: 100;
+    position: relative;
+    width: 15%;
+    height: auto;
+    top: 0;
+    right: 0;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.set {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: #000;
+}
+
+.set>a {
+    text-align: center;
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #fff;
+    font-family: SunCd-ExtraBold;
+    font-size: 1.4rem;
+    letter-spacing: 0.1rem;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+.set>a i {
+    position: relative;
+    float: right;
+    margin-top: 4px;
+    color: #fff;
+}
+
+.set>a.active {
+    background-color: #000;
+    color: #fff;
+}
+
+.set>a.active i {
+    color: #fff;
+}
+
+.content {
+    display: none;
+    position: relative;
+    color: #fff;
+    width: 100%;
+    height: 600px;
+    overflow: auto;
+    background-color: #000;
+    padding: 10px 15px 40px 15px;
+}
+
+.content a {
+    font-family: Sun-Regular;
+    font-size: 0.8rem;
+    margin: 0;
+    color: #fff;
+}
+
+.name>a {
+    color: white;
+}
+
+.img_caption {
+    font-family: SunCd-SemiBold;
+    font-size: 1rem;
+    margin: 0;
+    padding: 40px 40px 0 40px;
+    color: #000;
+}
+
+
+/*------------------------------------------------
+logo
+------------------------------------------------*/
+
+.logo {
+    position: absolute;
+    top: 1%;
+    left: 2.5%;
+    width: 8%;
+    height: 12%;
+    background: url(http://www.moongallery.eu/wp-content/uploads/2019/05/moon_gallery_logo_transparent-01.png) no-repeat;
+    background-size: contain;
+}
+
+
+/*------------------------------------------------
+buttons
+------------------------------------------------*/
+
+.about {
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    width: auto;
+    height: auto;
+}
+
+.workshops {
+    position: absolute;
+    top: 20%;
+    right: 45%;
+    width: auto;
+    height: auto;
+}
+
+.gallery {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    width: auto;
+    height: auto;
+}
+
+.open_call {
+    position: absolute;
+    top: 40%;
+    right: 10%;
+    width: auto;
+    height: auto;
+}
+
+.agenda {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    width: auto;
+    height: auto;
+}
+
+.contact {
+    position: absolute;
+    top: 90%;
+    left: 60%;
+    width: auto;
+    height: auto;
+}
+
+.facebook {
+    position: absolute;
+    top: 80%;
+    left: 5%;
+    width: auto;
+    height: auto;
+}
+
+.facebook>a {
+    color: #fff;
+}
+
+.facebook>a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.instagramm {
+    position: absolute;
+    top: 90%;
+    left: 10%;
+    width: auto;
+    height: auto;
+}
+
+.instagramm>a {
+    color: #fff;
+}
+
+.instagramm>a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.login {
+    position: absolute;
+    top: 80%;
+    right: 40%;
+    width: 10%;
+    height: auto;
+}
+
+.collaborators {
+    position: absolute;
+    top: 60%;
+    left: 25%;
+    width: 15%;
+    height: auto;
+}
+
+
+/*------------------------------------------------
+login
+------------------------------------------------*/
+
+input[type=text],
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: none;
+}
+
+#mc_embed_signup {
+    color: #fff;
+    font-family: SunCd-SemiBold;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    text-align: left;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    transition: all 1s;
+}
+
+#mc_embed_signup h2 {
+    color: #fff;
+    font-family: SunCd-Bold;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    text-align: left;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    transition: all 1s;
+}
+
+
+/* Set a style for all buttons */
+
+button {
+    color: #fff;
+    background-color: #000;
+    font-family: SunCd-ExtraBold;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    transition: all 1s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+.log {
+    background-color: #000;
+    color: #fff;
+    font-family: Sun-Regular;
+    border: solid 1px #fff;
+    margin-top: 12px;
+    font-size: 0.9rem;
+    padding: 5px;
+}
+
+.form {
+    padding: 45px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+.psw>a {
+    color: #fff;
+}
+
+.psw>a:hover {
+    color: #fff;
+}
+
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: hidden;
+    /* Enable scroll if needed */
+    padding-top: 60px;
+}
+
+
+/* Modal Content/Box */
+
+.modal-subs {
+    background-color: #000;
+    position: static;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: scroll;
+    width: 60%;
+    height: 80%;
+    color: #fff;
+    font-family: Sun-Regular;
+}
+
+
+/* The Close Button (x) */
+
+.close {
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+    text-shadow: none;
+    opacity: 1;
+    margin: 10px 35px;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+.close>p:hover {
+    color: #dcddde;
+    font-size: 35px;
+    font-weight: bold;
+    text-shadow: none;
+    opacity: 1;
+    transition: scale(1.1);
+}
+
+.close>p {
+    position: fixed;
+    z-index: 1000;
+}
+
+
+/* Add Zoom Animation */
+
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes animatezoom {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+
+/* Change styles for span and cancel button on extra small screens */
+
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+}
+
+
+/*------------------------------------------------
+gallery page
+------------------------------------------------*/
+
+.grid_wraper {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+    grid-auto-rows: 1fr;
+    padding-top: 127px;
+    overflow: auto;
+    height: auto;
+    background-color: black;
+}
+
+.grid::before {
+    content: '';
+    width: 0;
+    padding-bottom: 100%;
+    grid-row: 1 / 1;
+    grid-column: 1 / 1;
+}
+
+.grid>*:first-child {
+    grid-row: 1 / 1;
+    grid-column: 1 / 1;
+}
+
+
+/* Just to make the grid visible */
+
+.grid>* {
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px white solid;
+}
+
+.featured_image {
+    cursor: pointer;
+}
+
+
+/*------------------------------------------------
+about
+------------------------------------------------*/
+
+.modal-about {
+    background-color: #000;
+    position: fixed;
+    margin-left: auto;
+    margin-right: auto;
+    position: static;
+    overflow: scroll;
+    width: 60%;
+    height: 80%;
+    color: #fff;
+    font-family: Sun-Regular;
+}
+
+.about_cont {
+    padding: 45px;
+}
+
+.img2 {
+    width: 100%;
+    height: auto;
+}
+
+.img1 {
+    width: 100%;
+    height: auto;
+}
+
+.img3 {
+    width: 100%;
+    height: auto;
+}
+
+.has-fixed-layout {
+    width: auto !important;
+}
+
+.has-fixed-layout>tbody>tr>td {
+    padding-right: 20px !important;
+}
+
+.about_gallery_img>figure>img {
+    width: 100%;
+    height: auto !important;
+}
+
+
+/*------------------------------------------------
+workshops
+------------------------------------------------*/
+
+.modal-workshops {
+    background-color: #000;
+    position: fixed;
+    margin-left: auto;
+    margin-right: auto;
+    position: static;
+    overflow: scroll;
+    width: 60%;
+    height: 80%;
+    color: #fff;
+    font-family: Sun-Regular;
+}
+
+.workshop_cont {
+    padding: 45px;
+}
+
+
+/*------------------------------------------------
+open_call
+------------------------------------------------*/
+
+.modal-open_call {
+    background-color: #000;
+    position: fixed;
+    margin-left: auto;
+    margin-right: auto;
+    position: static;
+    overflow: scroll;
+    width: 60%;
+    height: 80%;
+    color: #fff;
+    font-family: Sun-Regular;
+}
+
+.form_title {
+    font-family: SunCd-SemiBold;
+}
+
+.call_cont {
+    padding: 45px;
+}
+
+.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required {
+    border: solid 1px black;
+    padding: 10px;
+    margin: 8px 0;
+    width: 100%;
+}
+
+.wpcf7-form-control.wpcf7-text.wpcf7-email.wpcf7-validates-as-required.wpcf7-validates-as-email {
+    border: solid 1px black;
+    padding: 10px;
+    margin: 8px 0;
+    width: 100%;
+}
+
+.wpcf7-form-control.wpcf7-text.wpcf7-url.wpcf7-validates-as-url {
+    border: solid 1px black;
+    padding: 10px;
+    margin: 8px 0;
+    width: 100%;
+}
+
+.wpcf7-form-control.wpcf7-textarea.wpcf7-validates-as-required {
+    border: solid 1px black;
+    padding: 10px;
+    margin: 8px 0;
+    width: 100%;
+}
+
+.wpcf7-form {
+    font-family: Sun-Regular;
+    font-size: 1rem;
+}
+
+.call_2 {
+    width: 100%;
+}
+
+.wpcf7-form-control.wpcf7-submit {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 7px 20px;
+    font-family: SunCd-SemiBold;
+    float: right;
+    cursor: pointer;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    transition: all 1s;
+}
+
+.wpcf7-form-control.wpcf7-submit:hover {
+    transform: scale(1.1);
+}
+
+
+/*------------------------------------------------
+agenda
+------------------------------------------------*/
+
+.modal-agenda {
+    background-color: #000;
+    position: fixed;
+    margin-left: auto;
+    margin-right: auto;
+    position: static;
+    overflow: scroll;
+    width: 60%;
+    height: 80%;
+    color: #fff;
+    font-family: Sun-Regular;
+}
+
+.agenda_cont {
+    padding: 45px;
+}
+
+.event>a {
+    color: #fff;
+}
+
+.event>h3 {
+    color: #fff;
+    font-size: 150%;
+    font-family: Sun-Regular;
+}
+
+.event>p {
+    color: #fff;
+    font-size: 100%;
+    font-family: Sun-Regular;
+}
+
+.event_img {
+    max-width: 500px;
+    max-height: 500px;
+    height: auto;
+    width: 100%;
+}
+
+
+/*------------------------------------------------
+agenda
+------------------------------------------------*/
+
+.modal-contact {
+    background-color: #000;
+    position: fixed;
+    margin-left: auto;
+    margin-right: auto;
+    position: static;
+    overflow: scroll;
+    width: 60%;
+    height: 80%;
+    color: #fff;
+    font-family: Sun-Regular;
+}
+
+.contact_cont {
+    padding: 45px;
+}
+
+
+/*------------------------------------------------
+partners
+------------------------------------------------*/
+
+.modal-part {
+    background-color: #000;
+    position: fixed;
+    margin-left: auto;
+    margin-right: auto;
+    position: static;
+    overflow: scroll;
+    width: 60%;
+    height: 80%;
+    color: #fff;
+    font-family: Sun-Regular;
+}
+
+.partner_cont {
+    padding: 45px;
+}
+
+.partner_section {
+    margin-bottom: 20px;
+    margin-right: -10px;
+    margin-left: -10px;
+}
+
+.partner_img {
+    width: 100%;
+    height: auto;
+}
+
+
+/*------------------------------------------------
+exhibition leflet
+------------------------------------------------*/
+
+.leflet_wraper {
+    width: 100%;
+    min-height: 100%;
+    height: auto;
+    background-color: #181818;
+}
+
+.leiden_event_logo {
+    width: 100%;
+    height: auto;
+    padding-top: 20px;
+}
+
+.language_button_wraper {
+    margin-top: 100px;
+    padding-bottom: 50px;
+}
+
+.language_button>a {
+    text-align: center;
+    background-color: white;
+    padding: 10px 20px;
+    font-family: SunCd-SemiBold;
+    font-size: 1.2rem;
+    color: #181818;
+    min-width: 120px;
+}
+
+.language_button {
+    display: flex;
+    justify-content: center;
+}
+
+.leiden_event>p {
+    padding-top: 30px;
+    font-family: SunCd-SemiBold;
+    font-size: 1.2rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+.work_descr>h2 {
+    font-family: 'SunCd-Bold';
+    font-size: 1.8rem;
+}
+
+.work_descr>h4 {
+    font-family: 'Sun-RegularItalic';
+    font-size: 1.2rem;
+}
+
+.work_descr>p {
+    font-family: 'Sun-Regular';
+    font-size: 1.2rem;
+}
+
+
+/*--------------------------------------------------------------
+responsive
+--------------------------------------------------------------*/
+
+
+/*xs*/
+
+@media only screen and (max-width: 768px) {
+    /*---------------------------------------------
+  artist page
+  ---------------------------------------------*/
+    .left {
+        width: 100%;
+        height: auto;
+        background-color: black;
+        overflow: auto;
+        box-sizing: border-box;
+    }
+    .right {
+        width: 100%;
+        height: auto;
+        background-color: white;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        overflow: auto;
+        box-sizing: border-box;
+    }
+    .menu {
+        width: 100%;
+    }
+    .modal-about,
+    .modal-workshops,
+    .modal-open_call,
+    .modal-subs,
+    .modal-part {
+        width: 95%;
+        height: 95%;
+    }
+    .about_cont,
+    .workshop_cont,
+    .call_cont,
+    .form,
+    .partner_cont {
+        padding: 45px 20px;
+    }
+    .artists {
+        width: 45%;
+    }
+    .about {
+        left: 20%;
+    }
+    .workshops {
+        right: 5%;
+    }
+    .gallery {
+        left: 5%;
+    }
+    .login {
+        right: 5%;
+    }
+    .instagramm {
+        left: 25%;
+    }
+}
+
+
+/*sm*/
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
     /*---------------------------------------------
     artist page
     ---------------------------------------------*/
-    .left{
-      width:100%;
-      height: auto;
-      background-color:black;
-      overflow: auto;
-      box-sizing: border-box;
+    .left {
+        width: 100%;
+        height: auto;
+        background-color: black;
+        overflow: auto;
+        box-sizing: border-box;
     }
-    .right{
-      width:100%;
-      height: auto;
-      background-color:white;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-      overflow: auto;
-      box-sizing: border-box;
+    .right {
+        width: 100%;
+        height: auto;
+        background-color: white;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        overflow: auto;
+        box-sizing: border-box;
     }
-    .menu{
-      width: 100%;}
-	  
-	.modal-about, .modal-workshops, .modal-open_call, .modal-subs, .modal-part{
-    width: 95%;
-	height: 95%;
-  }
- .about_cont, .workshop_cont, .call_cont, .form, .partner_cont {
-  padding: 45px 25px ;
+    .menu {
+        width: 100%;
+    }
+    .modal-about,
+    .modal-workshops,
+    .modal-open_call,
+    .modal-subs,
+    .modal-part {
+        width: 95%;
+        height: 95%;
+    }
+    .about_cont,
+    .workshop_cont,
+    .call_cont,
+    .form,
+    .partner_cont {
+        padding: 45px 25px;
+    }
+    .artists {
+        width: 25%;
+    }
+    .workshops {
+        right: 20%;
+    }
 }
-	  .artists{
-		  width:25%;
-	  }
-	  .workshops{
-		  right:20%;
-	  }
-    }
-    /*md*/
-    @media screen and (min-width: 992px) and (max-width: 1200px){
-      /*---------------------------------------------
-      artist page
-      ---------------------------------------------*/
-      .left{
-        width:60%;
-        height: 100%;
-        background-color:black;
-        float: left;
-        overflow: auto;
-        box-sizing: border-box;
-      }
-      .right{
-        width:40%;
-        height: 100%;
-        float:right;
-        background-color:white;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        overflow: auto;
-        box-sizing: border-box;
-      }
-    }
 
-    /*lg*/
-    @media screen and (min-width: 1200px)  {
-      /*---------------------------------------------
-      artist page
-      ---------------------------------------------*/
-      .left{
-        width:60%;
-        height: 100%;
-        background-color:black;
-        float: left;
-        overflow: auto;
-        box-sizing: border-box;
-      }
-      .right{
-        width:40%;
-        height: 100%;
-        float:right;
-        background-color:white;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        overflow: auto;
-        box-sizing: border-box;
-      }
-      .artist_wraper{
-        overflow: hidden;
-      }
-    }
 
+/*md*/
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
     /*---------------------------------------------
+      artist page
+      ---------------------------------------------*/
+    .left {
+        width: 60%;
+        height: 100%;
+        background-color: black;
+        float: left;
+        overflow: auto;
+        box-sizing: border-box;
+    }
+    .right {
+        width: 40%;
+        height: 100%;
+        float: right;
+        background-color: white;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        overflow: auto;
+        box-sizing: border-box;
+    }
+}
+
+
+/*lg*/
+
+@media screen and (min-width: 1200px) {
+    /*---------------------------------------------
+      artist page
+      ---------------------------------------------*/
+    .left {
+        width: 60%;
+        height: 100%;
+        background-color: black;
+        float: left;
+        overflow: auto;
+        box-sizing: border-box;
+    }
+    .right {
+        width: 40%;
+        height: 100%;
+        float: right;
+        background-color: white;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        overflow: auto;
+        box-sizing: border-box;
+    }
+    .artist_wraper {
+        overflow: hidden;
+    }
+}
+
+
+/*---------------------------------------------
     gallery page
     ---------------------------------------------*/
 
-  #block-for-slider {
-      width: 80%;
-      margin: 0 auto;
-      margin-top: 100px;
-      margin-bottom: 100px;
-  }
+#block-for-slider {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
 
-  #viewport {
-      width: 100%;
-      height: calc(100% - 200px);
-      position: relative;
-      overflow: hidden;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      -o-user-select: none;
-      user-select: none;
-      text-align: center;
-  }
+#viewport {
+    width: 100%;
+    height: calc(100% - 200px);
+    position: relative;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    text-align: center;
+}
 
-  #slidewrapper {
-      position: relative;
-      width: calc(100% * 4);
-      -webkit-transition: 1s;
-      -o-transition: 1s;
-      transition: 1s;
-      -webkit-transition-timing-function: cubic-bezier(.67,.01,.23,1);
-      -o-transition-timing-function: cubic-bezier(.67,.01,.23,1);
-      transition-timing-function: cubic-bezier(.67,.01,.23,1);
-  }
+#slidewrapper {
+    position: relative;
+    width: calc(100% * 4);
+    -webkit-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+    -webkit-transition-timing-function: cubic-bezier(.67, .01, .23, 1);
+    -o-transition-timing-function: cubic-bezier(.67, .01, .23, 1);
+    transition-timing-function: cubic-bezier(.67, .01, .23, 1);
+}
 
-  #slidewrapper, #slidewrapper ul, #slidewrapper li {
-      margin: 0;
-      padding: 0;
-  }
+#slidewrapper,
+#slidewrapper ul,
+#slidewrapper li {
+    margin: 0;
+    padding: 0;
+}
 
-  .slide {
-      width: calc(100%/4);
-      list-style: none;
-      display: inline;
-      float: left;
-  }
+.slide {
+    width: calc(100%/4);
+    list-style: none;
+    display: inline;
+    float: left;
+}
 
-  .slide-img {
-      width: 100%;
-  }
+.slide-img {
+    width: 100%;
+}
 
-  #prev-btn, #next-btn {
-      position: absolute;
-      width: 50px;
-      height: 50px;
-      background-color: #fff;
-      border-radius: 50%;
-      top: calc(50% - 25px);
-  }
+#prev-btn,
+#next-btn {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    top: calc(50% - 25px);
+}
 
-  #prev-btn:hover, #next-btn:hover {
-      cursor: pointer;
-  }
+#prev-btn:hover,
+#next-btn:hover {
+    cursor: pointer;
+}
 
-  #prev-btn {
-      left: 20px;
-  }
+#prev-btn {
+    left: 20px;
+}
 
-  #next-btn {
-      right: 20px;
-  }
+#next-btn {
+    right: 20px;
+}
 
-  .slide-nav-btn {
-      position: relative;
-      display: inline-block;
-      list-style: none;
-      width: 20px;
-      height: 20px;
-      background-color: #fff;
-      border-radius: 50%;
-      margin: 3px;
-  }
+.slide-nav-btn {
+    position: relative;
+    display: inline-block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 3px;
+}
 
-  .slide-nav-btn:hover {
-      cursor: pointer;
-  }
+.slide-nav-btn:hover {
+    cursor: pointer;
+}
+
 
 /*----------------------
 Donation page
 ----------------------*/
-
