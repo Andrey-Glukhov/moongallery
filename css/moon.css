@@ -1423,3 +1423,65 @@ responsive
 /*----------------------
 Donation page
 ----------------------*/
+
+#main {
+    background-color: black !important;
+}
+
+.woocommerce {
+    background-color: black;
+}
+
+#order_review {
+    background-color: black;
+}
+
+#billing_first_name {
+    margin: 10px;
+}
+
+#billing_last_name {
+    margin: 10px;
+}
+
+#billing_company {
+    margin: 10px;
+}
+
+#billing_country {
+    margin: 10px;
+}
+
+#billing_address_1 {
+    margin: 10px;
+}
+
+#billing_address_2 {
+    margin: 10px;
+    margin-left: 260px;
+}
+
+#billing_postcode {
+    margin: 10px;
+}
+
+#billing_city {
+    margin: 10px;
+}
+
+#billing_phone {
+    margin: 10px;
+}
+
+#billing_email {
+    margin: 10px;
+}
+
+label {
+    width: 250px;
+    display: inline-block;
+}
+
+#radio-button {
+    visibility: hidden;
+}
