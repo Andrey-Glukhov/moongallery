@@ -18,6 +18,11 @@
 defined( 'ABSPATH' ) || exit;
 
 get_header( 'shop' );
+
+// global $woocommerce;
+// $woocommerce->cart->empty_cart();
+
+//Count all processind orders total
 $args = array(
 	'limit' => 9999,
 	'return' => 'objects',
@@ -53,6 +58,7 @@ $args = array(
  * @hooked woocommerce_breadcrumb - 20
  * @hooked WC_Structured_Data::generate_website_data() - 30
  */
+
 do_action( 'woocommerce_before_main_content' );
 
 ?>
@@ -132,8 +138,22 @@ do_action( 'woocommerce_after_main_content' );
  */
 do_action( 'woocommerce_sidebar' );
 //add cart and checkout to products pagegit 
-echo do_shortcode( '[woocommerce_cart]' );
-echo do_shortcode( '[woocommerce_checkout]' );?>
+//echo do_shortcode( '[woocommerce_cart]' );
+//$WC_Cart = new WC_Cart();
+//$cart_total = $WC_Cart->get_cart_contents_count();
+global $woocommerce;
+$cart_total = $woocommerce->cart->get_cart_contents_count();
+error_log('total----' . $cart_total);
+if ($cart_total <= 0 ) { ?>
+<form name="checkout" method="post" class="checkout woocommerce-checkout" action="http://localhost:8888/moon_gallery/wordpress/checkout/" enctype="multipart/form-data" novalidate="novalidate">
+	<div id="order_review" class="woocommerce-checkout-review-order">
+		<div id="payment" class="woocommerce-checkout-payment">
+		</div>
+	</div>	
+</form>
+<?php }  else {
+	echo do_shortcode( '[woocommerce_checkout]' );
+} ?>
 <button class="donation_button">DONATE</button>
 
 <?php get_footer( 'shop' );

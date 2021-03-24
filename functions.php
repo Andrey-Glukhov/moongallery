@@ -4,13 +4,13 @@ function moon_script_enqueue(){
 	wp_enqueue_style( 'moon-stylesheet', get_template_directory_uri() . '/css/moon.css', array(), '1.0.0', 'all' );
 //js
   wp_enqueue_script('jquery');
-  wp_enqueue_script( 'moon-js', get_template_directory_uri() . '/js/moon.js', array(), '1.0.0', true );
+  wp_enqueue_script( 'moon-js', get_template_directory_uri() . '/js/moon.js', array('jquery'), '1.0.0', true );
   
   if (is_shop()) {
     
     global $wp_scripts;
     //WC_Frontend_Scripts
-    wp_enqueue_script('wc-cart');
+   // wp_enqueue_script('wc-cart');
     wp_enqueue_script('wc-checkout');
     
   //  foreach( $wp_scripts->queue as $script ) :
@@ -66,7 +66,37 @@ if ( get_option( 'gallery_donaion' ) === false ) {
   add_option( 'gallery_donaion', 20000 );
 }
 
-
+add_filter('woocommerce_billing_fields','wpb_custom_billing_fields');
+function wpb_custom_billing_fields( $fields = array() ) {
+//$chosen_payment_method = WC()->session->get('chosen_payment_method');
+//if($chosen_payment_method == "paypal"){
+// $fields['billing_first_name']['required']= false;
+// $fields['billing_last_name']['required']= false;
+// $fields['billing_company']['required']  = false;
+// $fields['billing_email']['required']   = false;
+// $fields['billing_address_1']['required']= false;
+// $fields['billing_address_2']['required']= false;
+// $fields['billing_state']['required']   = false;
+// $fields['billing_city']['required']     = false;
+// $fields['billing_phone']['required']    = false;
+// $fields['billing_postcode']['required'] = false;
+// $fields['billing_country']['required']  = false;
+// //}
+unset($fields['billing_first_name']);
+unset($fields['billing_last_name']);
+unset($fields['billing_company']);
+unset($fields['billing_email']);
+unset($fields['billing_address_1']);
+unset($fields['billing_address_2']);
+unset($fields['billing_state']);
+unset($fields['billing_city']);
+unset($fields['billing_phone']);
+unset($fields['billing_postcode']);
+unset($fields['billing_country']);
+//}
+//error_log('bill---' . print_r($fields,true));
+return $fields;
+}
 
 
 
