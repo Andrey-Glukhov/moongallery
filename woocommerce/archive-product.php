@@ -34,7 +34,7 @@ $args = array(
    foreach( $orders as $order_obj ) {
 	$sum += $order_obj->get_total();
    } 
-   echo '---' . $sum;
+   
 
     $ordermax = 20000;
     
@@ -155,5 +155,7 @@ if ($cart_total <= 0 ) { ?>
 	echo do_shortcode( '[woocommerce_checkout]' );
 } ?>
 <button class="donation_button">DONATE</button>
+<div class="image_earth"></div>
+<div class="image_moon"></div>
 
 <?php get_footer( 'shop' );
