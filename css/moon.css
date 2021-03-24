@@ -1478,10 +1478,91 @@ Donation page
 }
 
 label {
-    width: 250px;
-    display: inline-block;
+    width: 250px;    
 }
 
-#radio-button {
-    visibility: hidden;
+.radio-button{
+    width: 0px;
+    height: 0px;
 }
+
+
+.cart-empty.woocommerce-info{
+    display: none;
+}
+
+.button.product_type_simple.add_to_cart_button.ajax_add_to_cart{
+    display: none;
+}
+
+.woocommerce-loop-product__title
+{
+    display: none;
+}
+
+.woocommerce-Price-amount.amount{
+    display: none;
+    
+}
+
+.border{
+    width: 75px;
+    height: 30px;
+}
+
+.donation_button{
+    position: absolute;
+}
+
+.image_earth{
+    content: url(../img/earth.png);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin-top: 40px;
+    margin-left: 20%;
+}
+
+.image_moon{
+    content: url(../img/moon.png);
+    width: 175px;
+    height: 175px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin-top: 3px;
+    margin-right: 19%;
+}
+
+
+.progress{
+    width: 600px;
+    margin-left:28%;
+    margin-top: 50px;
+    margin-bottom: 100px;
+   
+}
+
+.return-to-shop{
+    display: none;
+}
+
+.woocommerce{
+    text-align: center;
+}
+
+.woocommerce-breadcrumb{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
