@@ -65,10 +65,11 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	do_action( 'woocommerce_after_shop_loop_item' );
     
     ?>
-    
+    <!--  <<< SEED Add -->
     <label class="radio-label">
         <!-- <div style="border:1px solid white; text-align:center"  class="border"> -->
         <input type="radio" name="radio" class="radio-button" value="donation" /> <div class="radio__text"><?php echo $product->get_price(); ?> €</div>
         <!-- </div> -->
     </label>
+	<!-- >>> -->
 </li>
