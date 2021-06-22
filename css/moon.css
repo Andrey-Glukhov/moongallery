@@ -1427,7 +1427,7 @@ Donation page
 
 body{
     background-color: black;
-    background-image: url("../img/background.jpg");
+
 }
 
 #order_review {
@@ -1505,7 +1505,11 @@ label {
     height: 30px;
 }
 
-.back_image{
+.archive{ 
+    background-image: url("../img/background.jpg");
+}
+
+.donation_back_wrapper{
     background-color: rgba(8, 8, 8, 0.75);
     position: absolute;
     margin: 20px;
@@ -1590,7 +1594,7 @@ button.donation_button {
     margin: 0px 20px 0px 5px;
 }
 
-.footer{
+.doantion_footer{
     width: 100%;
     height: 80px;
     background-color: #1b023a;
@@ -1598,13 +1602,13 @@ button.donation_button {
     display: flex;
 }
 
-.footer > div {
+.doantion_footer > div {
     margin: 10px;
     padding: 20px;
     flex: 30%;
   }
 
-.footer a{
+.doantion_footer a{
     display: inline-block;
     padding: 0 14px;
     color: white;
@@ -1644,18 +1648,25 @@ button.donation_button {
 .checkout.woocommerce-checkout, .woocommerce-checkout-review-order{
     position: fixed;
     bottom: 0;
+    margin-left: 20px;
+
     z-index: 999;
 }
 
 .woocommerce-privacy-policy-text p{
     color: white;
-    padding: 10px 20px 0px 10px;
+    padding: 10px 10px 0px 10px;
+
+
 }
 
 .woocommerce #payment #place_order, .woocommerce-page #payment #place_order{
     display: block;
     margin: 0px auto;
+
 }
+
+
 
 
 .return-to-shop {
@@ -1724,17 +1735,19 @@ button.donation_button {
 
 
 #payment.woocommerce-checkout-payment {
-    background-color: #000 !important;
+    background-color: rgb(0, 0, 0, 0) !important;
+
+
 }
 
 
 @media (max-width: 800px) {
-    .footer{
+    .doantion_footer{
         display: block;
         padding: 20px 20px 280px 20px;
     }
 
-    .footer > div {
+    .doantion_footer > div {
       flex: 100%;
       padding: 0;
     }
@@ -1746,6 +1759,11 @@ button.donation_button {
     .woocommerce ul.products li.product, .woocommerce-page ul.products li.product{
         width: 17vw!important;
         float: left!important;
+    }
+    .checkout.woocommerce-checkout, .woocommerce-checkout-review-order{
+        margin-left: 0;
+        margin-right: 20px;
+
     }
 
     .radio__text {
