@@ -19,10 +19,11 @@ defined( 'ABSPATH' ) || exit;
 
 get_header( 'shop' );
 
+// <<< SEED  Add
 // global $woocommerce;
 // $woocommerce->cart->empty_cart();
 
-//Count all processind orders total
+//Count all processind orders total and 
 $args = array(
 	'limit' => 9999,
 	'return' => 'objects',
@@ -51,7 +52,9 @@ $args = array(
     </div>
     </div>
 
-<?php /**
+<?php
+// >>> 
+/**
  * Hook: woocommerce_before_main_content.
  *
  * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
@@ -137,6 +140,7 @@ do_action( 'woocommerce_after_main_content' );
  * @hooked woocommerce_get_sidebar - 10
  */
 do_action( 'woocommerce_sidebar' );
+// <<<   SEED Add
 //add cart and checkout to products pagegit 
 //echo do_shortcode( '[woocommerce_cart]' );
 //$WC_Cart = new WC_Cart();
@@ -144,18 +148,25 @@ do_action( 'woocommerce_sidebar' );
 global $woocommerce;
 $cart_total = $woocommerce->cart->get_cart_contents_count();
 error_log('total----' . $cart_total);
-if ($cart_total <= 0 ) { ?>
-<form name="checkout" method="post" class="checkout woocommerce-checkout" action="http://localhost:8888/moon_gallery/wordpress/checkout/" enctype="multipart/form-data" novalidate="novalidate">
+//if ($cart_total <= 0 ) { ?>
+<!-- <form name="checkout" method="post" class="checkout woocommerce-checkout" action="http://localhost:8888/moon_gallery/wordpress/checkout/" enctype="multipart/form-data" novalidate="novalidate">
 	<div id="order_review" class="woocommerce-checkout-review-order">
 		<div id="payment" class="woocommerce-checkout-payment">
 		</div>
 	</div>	
-</form>
-<?php }  else {
-	echo do_shortcode( '[woocommerce_checkout]' );
-} ?>
+</form> -->
+<?php 
+// }  else {
+// 	echo do_shortcode( '[woocommerce_checkout]' );
+// } 
+$checkout = WC()->checkout();
+
+		wc_get_template( 'checkout/form-checkout.php', array( 'checkout' => $checkout ) );
+?>
 <button class="donation_button">DONATE</button>
 <div class="image_earth"></div>
 <div class="image_moon"></div>
 
-<?php get_footer( 'shop' );
+<?php
+// >>>
+get_footer( 'shop' );

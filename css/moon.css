@@ -1570,3 +1570,7 @@ label {
     background-color: #fff;
     color: #000;
 }
+
+#payment.woocommerce-checkout-payment {
+    background-color: #000 !important;
+}
