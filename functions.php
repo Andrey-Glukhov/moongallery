@@ -5,14 +5,14 @@ function moon_script_enqueue(){
 //js
   wp_enqueue_script('jquery');
   wp_enqueue_script( 'moon-js', get_template_directory_uri() . '/js/moon.js', array('jquery'), '1.0.0', true );
-  
+  wp_register_script( 'wcr-js', get_template_directory_uri() . '/js/wcr.js', array('wc-checkout'), '1.0.0', true );
   if (is_shop()) {
     
-    global $wp_scripts;
+    //global $wp_scripts;
     //WC_Frontend_Scripts
    // wp_enqueue_script('wc-cart');
     wp_enqueue_script('wc-checkout');
-    
+    wp_enqueue_script('wcr-js');
   //  foreach( $wp_scripts->queue as $script ) :
   //      $result['styles'][] =  $wp_scripts->registered[$script]->src . ";";
        
@@ -66,37 +66,54 @@ if ( get_option( 'gallery_donaion' ) === false ) {
   add_option( 'gallery_donaion', 20000 );
 }
 
-add_filter('woocommerce_billing_fields','wpb_custom_billing_fields');
-function wpb_custom_billing_fields( $fields = array() ) {
-//$chosen_payment_method = WC()->session->get('chosen_payment_method');
-//if($chosen_payment_method == "paypal"){
-// $fields['billing_first_name']['required']= false;
-// $fields['billing_last_name']['required']= false;
-// $fields['billing_company']['required']  = false;
-// $fields['billing_email']['required']   = false;
-// $fields['billing_address_1']['required']= false;
-// $fields['billing_address_2']['required']= false;
-// $fields['billing_state']['required']   = false;
-// $fields['billing_city']['required']     = false;
-// $fields['billing_phone']['required']    = false;
-// $fields['billing_postcode']['required'] = false;
-// $fields['billing_country']['required']  = false;
+// add_filter('woocommerce_billing_fields','wpb_custom_billing_fields');
+// function wpb_custom_billing_fields( $fields = array() ) {
+// //$chosen_payment_method = WC()->session->get('chosen_payment_method');
+// //if($chosen_payment_method == "paypal"){
+// // $fields['billing_first_name']['required']= false;
+// // $fields['billing_last_name']['required']= false;
+// // $fields['billing_company']['required']  = false;
+// // $fields['billing_email']['required']   = false;
+// // $fields['billing_address_1']['required']= false;
+// // $fields['billing_address_2']['required']= false;
+// // $fields['billing_state']['required']   = false;
+// // $fields['billing_city']['required']     = false;
+// // $fields['billing_phone']['required']    = false;
+// // $fields['billing_postcode']['required'] = false;
+// // $fields['billing_country']['required']  = false;
+// // //}
+// unset($fields['billing_first_name']);
+// unset($fields['billing_last_name']);
+// unset($fields['billing_company']);
+// unset($fields['billing_email']);
+// unset($fields['billing_address_1']);
+// unset($fields['billing_address_2']);
+// unset($fields['billing_state']);
+// unset($fields['billing_city']);
+// unset($fields['billing_phone']);
+// unset($fields['billing_postcode']);
+// unset($fields['billing_country']);
 // //}
-unset($fields['billing_first_name']);
-unset($fields['billing_last_name']);
-unset($fields['billing_company']);
-unset($fields['billing_email']);
-unset($fields['billing_address_1']);
-unset($fields['billing_address_2']);
-unset($fields['billing_state']);
-unset($fields['billing_city']);
-unset($fields['billing_phone']);
-unset($fields['billing_postcode']);
-unset($fields['billing_country']);
-//}
-//error_log('bill---' . print_r($fields,true));
-return $fields;
+// error_log('bill---' . print_r($fields,true));
+// return $fields;
+// }
+
+
+add_filter( 'woocommerce_checkout_fields' , 'remove_billing_fields_from_checkout' );
+function remove_billing_fields_from_checkout( $fields ) {
+  error_log('bill1---' . print_r($fields,true));
+    $fields[ 'billing' ] = array();
+    $fields[ 'shipping' ] = array();
+    error_log('bill2---' . print_r($fields,true));
+    return $fields;
 }
+// add_action('woocommerce_checkout_init','disable_billing');
+// function disable_billing($checkout){
+//   error_log('bill---' . print_r($checkout,true));
+//   $checkout->checkout_fields['billing']=array();
+//   //$checkout->checkout_fields['billing']=array();
+//   return $checkout;
+//   }
 
 
 

@@ -4,6 +4,8 @@ html {
     height: 100%;
     margin: 0;
     padding: 0;
+    max-width: 100vw;
+    overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -33,6 +35,7 @@ a,
 button:active {
     outline: none
 }
+
 
 @font-face {
     font-family: 'SunCd-SemiBold';
@@ -76,9 +79,6 @@ button:active {
     font-style: bold;
 }
 
-#main {
-    background-color: red;
-}
 
 .artist_button {
     color: #fff;
@@ -262,6 +262,7 @@ artist page
     width: 100%;
     height: 100%;
     position: fixed;
+    
 }
 
 .submission {
@@ -1424,12 +1425,9 @@ responsive
 Donation page
 ----------------------*/
 
-#main {
-    background-color: black !important;
-}
-
-.woocommerce {
+body{
     background-color: black;
+    background-image: url("../img/background.jpg");
 }
 
 #order_review {
@@ -1507,38 +1505,158 @@ label {
     height: 30px;
 }
 
-.donation_button {
+.back_image{
+    background-color: rgba(8, 8, 8, 0.75);
     position: absolute;
+    margin: 20px;
+    width: calc(100% - 40px);
+    height: calc(95% - 40px);
+    overflow-y: scroll;
+    border-radius: 30px;
 }
 
-.image_earth {
-    content: url(../img/earth.png);
-    width: 100px;
-    height: 100px;
+.donation_wrapper{
     position: absolute;
-    top: 0px;
-    left: 0px;
-    margin-top: 40px;
-    margin-left: 20%;
+    top: 0;
+    width: 100%;
+    left:0;
+    border-radius: 15px;
+    height: 0px;
 }
 
-.image_moon {
-    content: url(../img/moon.png);
-    width: 175px;
-    height: 175px;
+button.donation_button {
+    font-family:'Sun-Regular';
+    position: relative;
+    border-radius: 25px;
+    display: block;
+    margin: 290px auto;
+    font-size: 48px;
+    background-color: #29005A;
+    padding: 5px 40px;
+    text-shadow: 0px 0px 10px #FF9300;
+}
+.donation_button:hover {
+    background-color: #642ca8;
+}
+
+.image_logo {
+    content: url(../img/logo.png);
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+.image_cube {
+    content: url(../img/cube.svg);
+    width: 10vw;
+    height: auto;
     position: absolute;
-    top: 0px;
-    right: 0px;
-    margin-top: 3px;
-    margin-right: 19%;
+    top: calc(7vw + 50px);
+    left: 8vw;
+}
+
+.image_iss {
+    content: url(../img/iss.png);
+    width: 15vw;
+    height: auto;
+    position: absolute;
+    top: calc(10vw + 50px);
+    right: 8vw;
+    transform: rotate(45deg);
+}
+
+.image_in {
+    content: url(../img/in.svg);
+    width: 25px;
+    height: auto;
+    display: inline-block;
+    margin: 0px 5px 0px 20px;
+}
+
+.image_insta{
+    content: url(../img/insta.svg);
+    width: 25px;
+    height: auto;
+    display: inline-block;
+    margin: 0px 5px 0px 10px;
+}
+
+.image_fb{
+    content: url(../img/fb.svg);
+    width: 25px;
+    height: auto;
+    display: inline-block;
+    margin: 0px 20px 0px 5px;
+}
+
+.footer{
+    width: 100%;
+    height: 80px;
+    background-color: #1b023a;
+    color: white;
+    display: flex;
+}
+
+.footer > div {
+    margin: 10px;
+    padding: 20px;
+    flex: 30%;
+  }
+
+.footer a{
+    display: inline-block;
+    padding: 0 14px;
+    color: white;
 }
 
 .progress {
-    width: 600px;
-    margin-left: 28%;
-    margin-top: 50px;
-    margin-bottom: 100px;
+    width: 80vw;
+    max-width: 800px;
+    margin: 220px auto 40px auto;
+    background-color: #1A0446;
+    height: 45px;
+    border-radius: 25px;
 }
+
+.progress-bar{
+    background-color: transparent;
+    background-image: url(../img/loadingblock.png);
+    background-repeat: repeat-x;
+    margin-left: 10px;
+    background-position: center left;
+    background-size: 10px auto;
+}
+
+.text_area{
+    font-family:'Sun-Regular';
+    display: block;
+    width: 90vw;
+    max-width: 750px;
+    height: auto;
+    color: white;
+    margin: 0 auto;
+    margin-top: -225px;
+    padding-bottom: 25px;
+}
+
+
+.checkout.woocommerce-checkout, .woocommerce-checkout-review-order{
+    position: fixed;
+    bottom: 0;
+    z-index: 999;
+}
+
+.woocommerce-privacy-policy-text p{
+    color: white;
+    padding: 10px 20px 0px 10px;
+}
+
+.woocommerce #payment #place_order, .woocommerce-page #payment #place_order{
+    display: block;
+    margin: 0px auto;
+}
+
 
 .return-to-shop {
     display: none;
@@ -1560,13 +1678,88 @@ label {
 }
 
 .radio__text {
+    font-family:'Sun-Regular';
+    background-color: #29005A;
+    width: 90px;
+    height: 90px;
+    line-height: 90px;
+    border-radius: 50px;
+    font-size: 28px;
     position: relative;
     cursor: pointer;
     color: #fff;
+    text-shadow: 0px 0px 10px #FF9300;
     text-align: center;
+    transition-duration: 1s;
 }
 
+
+.radio-label{
+    width: 100px;
+}
+
+.woocommerce ul.products{
+    width: 520px;
+    margin: 0 auto;
+    display: block;
+}
+
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product{
+    width: 110px!important;
+    margin: 0 10px!important;
+    display: block!important;
+    clear: none!important;
+}
+
+
 .radio-label input:checked+.radio__text {
-    background-color: #fff;
-    color: #000;
+    background-color: #642ca8;
+    color: #fff;
+}
+
+.radio__text:hover {
+    background-color: #642ca8;
+    transform: scale(1.1);
+}
+
+
+#payment.woocommerce-checkout-payment {
+    background-color: #000 !important;
+}
+
+
+@media (max-width: 800px) {
+    .footer{
+        display: block;
+        padding: 20px 20px 280px 20px;
+    }
+
+    .footer > div {
+      flex: 100%;
+      padding: 0;
+    }
+
+    .woocommerce ul.products{
+        width: 100%;
+    }
+
+    .woocommerce ul.products li.product, .woocommerce-page ul.products li.product{
+        width: 17vw!important;
+        float: left!important;
+    }
+
+    .radio__text {
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        border-radius: 50px;
+        font-size: 20px;
+    }
+
+    button.donation_button{
+        margin-top: 240px;
+        font-size: 36px;
+        padding: 5px 30px;
+    }
+
 }
