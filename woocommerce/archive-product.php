@@ -19,11 +19,10 @@ defined( 'ABSPATH' ) || exit;
 
 get_header( 'shop' );
 
-// <<< SEED  Add
 // global $woocommerce;
 // $woocommerce->cart->empty_cart();
 
-//Count all processind orders total and 
+//Count all processind orders total
 $args = array(
 	'limit' => 9999,
 	'return' => 'objects',
@@ -43,18 +42,18 @@ $args = array(
 
    
  ?>
+ <div class="back_image">
    
-   <div class="donation_total" data-donation_sum="<?php echo get_option('gallery_donaion'); ?>" ></div>
+<div class="donation_total" data-donation_sum="<?php echo get_option('gallery_donaion'); ?>" ></div>
 <div class="progress">
-<div class="progress-bar" role ="progressbar" aria-valuenow= "20000"
-     aria-valuemin="0" aria-valuemax="20000" style= "width:<?php echo ($sum/$ordermax) * 100;?>%">
-    
-    </div>
-    </div>
+  <!-- <div class="progress-bar" role ="progressbar" aria-valuenow= "20000"
+    aria-valuemin="0" aria-valuemax="20000" style= "width:<?php echo ($sum/$ordermax) * 100;?>%">  -->
+    <div class="progress-bar" role ="progressbar" aria-valuenow= "20000"
+    aria-valuemin="0" aria-valuemax="20000" style= "width: 50%"> 
+  </div>
+</div>
 
-<?php
-// >>> 
-/**
+<?php /**
  * Hook: woocommerce_before_main_content.
  *
  * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
@@ -140,7 +139,6 @@ do_action( 'woocommerce_after_main_content' );
  * @hooked woocommerce_get_sidebar - 10
  */
 do_action( 'woocommerce_sidebar' );
-// <<<   SEED Add
 //add cart and checkout to products pagegit 
 //echo do_shortcode( '[woocommerce_cart]' );
 //$WC_Cart = new WC_Cart();
@@ -163,10 +161,34 @@ $checkout = WC()->checkout();
 
 		wc_get_template( 'checkout/form-checkout.php', array( 'checkout' => $checkout ) );
 ?>
-<button class="donation_button">DONATE</button>
-<div class="image_earth"></div>
-<div class="image_moon"></div>
 
-<?php
-// >>>
-get_footer( 'shop' );
+  <div class="donation_wrapper">
+    <a href="http://www.moongallery.eu"><div class="image_logo"></div></a>
+    <button class="donation_button">Donate</button>
+    <div class="image_cube"></div>
+    <div class="image_iss"></div>
+    <div class="text_area">
+      <h1>Help us send art to the ISS</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Faucibus in ornare quam viverra orci sagittis eu volutpat. Purus faucibus ornare suspendisse sed. Diam quam nulla porttitor massa id. Non odio euismod lacinia at. Senectus et netus et malesuada fames ac turpis egestas maecenas. Tincidunt id aliquet risus feugiat in ante metus. Morbi enim nunc faucibus a pellentesque sit amet. Enim ut tellus elementum sagittis vitae et leo. Pharetra pharetra massa massa ultricies mi quis hendrerit. In arcu cursus euismod quis viverra nibh. </p>
+    </div> 
+    <div class="footer">
+      <div class="flex-box">
+        <a href="https://nl.linkedin.com/in/moon-gallery-a28712206"><div class="image_in"></div></a>
+        <a href="https://www.instagram.com/moongalleryofficial/"><div class="image_insta"></div></a>
+        <a href="https://www.facebook.com/artmoonmars.moongallery.5"><div class="image_fb"></div></a>
+      </div>
+      <div class="flex-box">
+        <p>©2020 Stichting Moon Gallery Fundation</p>
+      </div>
+      <div class="flex-box">
+        <a href="http://www.moongallery.eu">About</a>
+        <a href="http://www.moongallery.eu">Contact</a>
+      </div>
+    </div> 
+    <br>  
+    <br>   
+  </div>
+        
+</div>
+<?php get_footer( 'shop' );
+
