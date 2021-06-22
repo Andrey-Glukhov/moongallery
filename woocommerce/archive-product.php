@@ -19,8 +19,8 @@ defined( 'ABSPATH' ) || exit;
 
 get_header( 'shop' );
 
-// global $woocommerce;
-// $woocommerce->cart->empty_cart();
+ global $woocommerce;
+ $woocommerce->cart->empty_cart();
 
 //Count all processind orders total
 $args = array(
@@ -143,9 +143,9 @@ do_action( 'woocommerce_sidebar' );
 //echo do_shortcode( '[woocommerce_cart]' );
 //$WC_Cart = new WC_Cart();
 //$cart_total = $WC_Cart->get_cart_contents_count();
-global $woocommerce;
-$cart_total = $woocommerce->cart->get_cart_contents_count();
-error_log('total----' . $cart_total);
+// global $woocommerce;
+// $cart_total = $woocommerce->cart->get_cart_contents_count();
+// error_log('total----' . $cart_total);
 //if ($cart_total <= 0 ) { ?>
 <!-- <form name="checkout" method="post" class="checkout woocommerce-checkout" action="http://localhost:8888/moon_gallery/wordpress/checkout/" enctype="multipart/form-data" novalidate="novalidate">
 	<div id="order_review" class="woocommerce-checkout-review-order">
