@@ -171,6 +171,17 @@ $checkout = WC()->checkout();
       <h1>Fuel our flight to the ISS!</h1>
       <p>Let’s reach a low Earth orbit together; the point where the Moon Gallery will meet the cosmos for the very first time. Moon Gallery is scheduled to fly to the International Space Station aboard NG-17 in February of 2022. You can become the front runner of this exciting space journey! By donating money to the Moon Gallery, you can significantly contribute to reaching our next milestone. All kinds of support are greatly appreciated! Donations will be used to cover the costs of payload production, testing, launch preparations and the final launch to the space station. As a reward to our friends fuelling this flight to the ISS, you will receive your own Moon Gallery ISS patch and a digital catalogue of all the art pieces participating in this mission! For this, you only need to fill out the form below, so we can send this award to your address. If you have any questions, please feel free to contact us!<br><br>To space and beyond together!</p>
     </div> 
+	
+	<div class="wrapper">
+			<div class="carousel">
+				<div><img src="https://picsum.photos/300/200?random=1"></div>
+				<div><img src="https://picsum.photos/300/200?random=2"></div>
+				<div><img src="https://picsum.photos/300/200?random=3"></div>
+				<div><img src="https://picsum.photos/300/200?random=4"></div>
+			</div>
+	</div>
+
+
     <div class="donation_footer">
       <div class="flex-box">
         <a href="https://nl.linkedin.com/in/moon-gallery-a28712206"><div class="image_in"></div></a>

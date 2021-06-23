@@ -142,3 +142,15 @@ jQuery(function($) {
 //         $(document.body).trigger('update_checkout');
 //     };
 //     new AfterAddFunction();
+
+
+$(document).ready(function(){
+    $('.carousel').slick({
+    slidesToShow: 1,
+    dots:true,
+    centerMode: true,
+    });
+  });
+  
+  
+  
